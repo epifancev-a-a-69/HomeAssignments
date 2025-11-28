@@ -41,7 +41,7 @@ int main(){
                 *j = b/a;
       } else {
             j++;
-            int num = stol(word);
+            double num = stof(word);
             *j = num;
       }
     }
