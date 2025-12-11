@@ -1,2 +1,2 @@
-# HomeAssigaments
+# HomeAssignments
 
