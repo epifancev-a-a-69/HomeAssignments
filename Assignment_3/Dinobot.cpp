@@ -20,27 +20,52 @@ Dinobot::Dinobot(std::string name)
 Dinobot::Dinobot()
     : Autobot(), _ferocityLevel(0), _isPackHunter(true) {}
 
-bool Dinobot::primalRage() { return true; }
-void Dinobot::vmethod1() { std::cout << "Dinobot. vmethod1" << std::endl; }
-void Dinobot::vmethod0() { std::cout << "Dinobot. vmethod0" << std::endl; }
+bool Dinobot::primalRage()
+{
+    return true;
+}
+void Dinobot::vmethod1()
+{
+    std::cout << "Dinobot. vmethod1" << std::endl;
+}
+void Dinobot::vmethod0()
+{
+    std::cout << "Dinobot. vmethod0" << std::endl;
+}
 
-std::ostream& operator<<(std::ostream& os, const Dinobot& t) {
+std::ostream& operator<<(std::ostream& os, const Dinobot& t)
+{
     os << "Transformer: " << t._name << ", Health: " << t._health
        << ", Power: " << t._power << ", Transformation time: " << t._transformationTime
        << ", Engine model: " << t._engine.getModel() << ", Engine Horsepower: " << t._engine.getHorsepower()
        << ", Alt mode: " << t._altMode << ", Honor code: " << t._hasHonorCode
        << ", Ferocity: " << t._ferocityLevel << ", Pack hunter: " << t._isPackHunter;
-      
-    if (t._weapon!=nullptr) {
-      os << ", Weapon: " << t._weapon->getName()
-         << ", Weapon damage: " << t._weapon->getDamage();
-    } else {
-      os << ", Weapon: null";
+
+    if (t._weapon!=nullptr)
+    {
+        os << ", Weapon: " << t._weapon->getName()
+           << ", Weapon damage: " << t._weapon->getDamage();
+    }
+    else
+    {
+        os << ", Weapon: null";
     }
     return os;
 }
-void Dinobot::setFerocityLevel(int ferocityLevel) { _ferocityLevel = ferocityLevel; }
-void Dinobot::setIsPackHunter(bool isPackHunter) { _isPackHunter = isPackHunter; }
-    
-int Dinobot::getFerocityLevel() { return _ferocityLevel; }
-bool Dinobot::getIsPackHunter() { return _isPackHunter; }
+void Dinobot::setFerocityLevel(int ferocityLevel)
+{
+    _ferocityLevel = ferocityLevel;
+}
+void Dinobot::setIsPackHunter(bool isPackHunter)
+{
+    _isPackHunter = isPackHunter;
+}
+
+int Dinobot::getFerocityLevel()
+{
+    return _ferocityLevel;
+}
+bool Dinobot::getIsPackHunter()
+{
+    return _isPackHunter;
+}

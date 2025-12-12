@@ -10,7 +10,8 @@ assignment 4
 #include "Autobot.h"
 #include <string>
 
-class Dinobot : public Autobot {
+class Dinobot : public Autobot
+{
 public:
     Dinobot(std::string name, int health, int power, int transformationTime, Engine engine, Weapon* weapon, std::string altMode, bool hasHonorCode, int ferocityLevel, bool isPackHunter);
     Dinobot(std::string name, int health, int power, int transformationTime, Engine engine, Weapon* weapon, std::string altMode, bool hasHonorCode);
@@ -22,15 +23,15 @@ public:
     bool primalRage();
     void vmethod1() override;
     void vmethod0() override;
-    
+
     friend std::ostream& operator<<(std::ostream& os, const Dinobot& t);
-    
+
     void setFerocityLevel(int ferocityLevel);
     void setIsPackHunter(bool isPackHunter);
-    
+
     int getFerocityLevel();
     bool getIsPackHunter();
-    
+
 private:
     int _ferocityLevel;
     bool _isPackHunter;

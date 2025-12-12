@@ -18,27 +18,52 @@ Decepticon::Decepticon(std::string name)
 Decepticon::Decepticon()
     : Transformer(), _specialAbility("null"), _isRuthless(true) {}
 
-bool Decepticon::sabotage() { return true; }
-void Decepticon::vmethod1() { std::cout << "Decepticon. vmethod1" << std::endl; }
-void Decepticon::vmethod0() { std::cout << "Decepticon. vmethod0" << std::endl; }
+bool Decepticon::sabotage()
+{
+    return true;
+}
+void Decepticon::vmethod1()
+{
+    std::cout << "Decepticon. vmethod1" << std::endl;
+}
+void Decepticon::vmethod0()
+{
+    std::cout << "Decepticon. vmethod0" << std::endl;
+}
 
-std::ostream& operator<<(std::ostream& os, const Decepticon& t) {
+std::ostream& operator<<(std::ostream& os, const Decepticon& t)
+{
     os << "Transformer: " << t._name << ", Health: " << t._health
        << ", Power: " << t._power << ", Transformation time: " << t._transformationTime
        << ", Engine model: " << t._engine.getModel() << ", Engine Horsepower: " << t._engine.getHorsepower()
        << ", Special ability: " << t._specialAbility << ", Ruthless: " << t._isRuthless;
-       
-    if (t._weapon!=nullptr) {
-      os << ", Weapon: " << t._weapon->getName()
-         << ", Weapon damage: " << t._weapon->getDamage();
-    } else {
-      os << ", Weapon: null";
+
+    if (t._weapon!=nullptr)
+    {
+        os << ", Weapon: " << t._weapon->getName()
+           << ", Weapon damage: " << t._weapon->getDamage();
+    }
+    else
+    {
+        os << ", Weapon: null";
     }
     return os;
 }
-void Decepticon::setSpecialAbility(std::string specialAbility) { _specialAbility = specialAbility; }
-void Decepticon::setIsRuthless(bool isRuthless) { _isRuthless = isRuthless; }
+void Decepticon::setSpecialAbility(std::string specialAbility)
+{
+    _specialAbility = specialAbility;
+}
+void Decepticon::setIsRuthless(bool isRuthless)
+{
+    _isRuthless = isRuthless;
+}
 
-std::string Decepticon::getSpecialAbility() { return _specialAbility; }
-bool Decepticon::getIsRuthless() { return _isRuthless; }
+std::string Decepticon::getSpecialAbility()
+{
+    return _specialAbility;
+}
+bool Decepticon::getIsRuthless()
+{
+    return _isRuthless;
+}
 

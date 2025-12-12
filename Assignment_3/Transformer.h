@@ -12,37 +12,38 @@ assignment 4
 #include <string>
 #include <iostream>
 
-class Transformer {
+class Transformer
+{
 public:
     Transformer();
     Transformer(std::string name, int health, int power, int transformationTime, Engine engine, Weapon* weapon);
     Transformer(std::string name, int health, int power, int transformationTime, Engine engine);
     Transformer(std::string name);
-    ~Transformer(); 
-    
+    ~Transformer();
+
     friend std::ostream& operator<<(std::ostream& os, const Transformer& obj);
-    
+
     bool move();
     bool transform();
     bool attack();
-    
+
     virtual void vmethod1();
     virtual void vmethod0() = 0;
-    
+
     void setName(std::string name);
     void setHealth(int health);
     void setPower(int power);
     void setTransformationTime(int transformationTime);
     void setEngine(Engine engine);
     void setWeapon(Weapon* weapon);
-    
+
     std::string getName();
     int getHealth();
     int getPower();
     int getTransformationTime();
     Engine getEngine();
     Weapon* getWeapon();
-    
+
 protected:
     std::string _name;
     int _health;
