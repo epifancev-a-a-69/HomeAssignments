@@ -6,8 +6,7 @@ My project number one
 
 #include "hello.h"
 
-int main()
-{
-    myproject::sayHello();
-    return 0;
+int main() {
+  myproject::sayHello();
+  return 0;
 }
