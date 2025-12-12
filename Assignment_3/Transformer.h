@@ -1,7 +1,7 @@
 /*
 Epifancev Artem
 st142163@student.spbu.ru
-assignment 3
+assignment 4
 */
 
 #ifndef TRANSFORMER_H
@@ -14,12 +14,20 @@ assignment 3
 
 class Transformer {
 public:
+    Transformer();
     Transformer(std::string name, int health, int power, int transformationTime, Engine engine, Weapon* weapon);
+    Transformer(std::string name, int health, int power, int transformationTime, Engine engine);
+    Transformer(std::string name);
     ~Transformer(); 
+    
+    friend std::ostream& operator<<(std::ostream& os, const Transformer& obj);
     
     bool move();
     bool transform();
     bool attack();
+    
+    virtual void vmethod1();
+    virtual void vmethod0() = 0;
     
     void setName(std::string name);
     void setHealth(int health);
@@ -35,7 +43,7 @@ public:
     Engine getEngine();
     Weapon* getWeapon();
     
-private:
+protected:
     std::string _name;
     int _health;
     int _power;
