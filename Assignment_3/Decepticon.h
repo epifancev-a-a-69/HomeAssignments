@@ -1,7 +1,7 @@
 /*
 Epifancev Artem
 st142163@student.spbu.ru
-assignment 3
+assignment 4
 */
 
 #ifndef DECEPTICON_H
@@ -13,8 +13,16 @@ assignment 3
 class Decepticon : public Transformer {
 public:
     Decepticon(std::string name, int health, int power, int transformationTime, Engine engine, Weapon* weapon, std::string specialAbility, bool isRuthless);
-    
+    Decepticon(std::string name, int health, int power, int transformationTime, Engine engine, Weapon* weapon);
+    Decepticon(std::string name, int health, int power, int transformationTime, Engine engine);
+    Decepticon(std::string name);
+    Decepticon();
+
     bool sabotage();
+    void vmethod1() override;
+    void vmethod0() override;
+    
+    friend std::ostream& operator<<(std::ostream& os, const Decepticon& t);
     
     void setSpecialAbility(std::string specialAbility);
     void setIsRuthless(bool isRuthless);

@@ -1,7 +1,7 @@
 /*
 Epifancev Artem
 st142163@student.spbu.ru
-assignment 3
+assignment 4
 */
 
 #ifndef WEAPON_H
@@ -12,6 +12,7 @@ assignment 3
 class Weapon {
 public:
     Weapon(std::string name, int damage);
+    Weapon();
     
     void setName(std::string name);
     void setDamage(int damage);
