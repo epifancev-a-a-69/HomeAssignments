@@ -1,7 +1,7 @@
 PROJECT = matrix
 CXX = g++
 CXXFLAGS = -lgtest -lgtest_main -pthread -Werror -Wpedantic -Wall -Wextra
-SRC = rational.cpp matrix.cpp test_matrix.cpp
+SRC = rational.cpp test_matrix.cpp
 OBJ = $(SRC:.cpp=.o)
 
 .PHONY: all clean
