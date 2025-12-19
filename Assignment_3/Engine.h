@@ -1,7 +1,7 @@
 /*
 Epifancev Artem
 st142163@student.spbu.ru
-assignment 3
+assignment 4
 */
 
 #ifndef ENGINE_H
@@ -9,16 +9,18 @@ assignment 3
 
 #include <string>
 
-class Engine {
+class Engine
+{
 public:
     Engine(std::string model, int horsepower);
-    
+    Engine();
+
     void setModel(std::string model);
     void setHorsepower(int horsepower);
-    
-    std::string getModel();
-    int getHorsepower();
-    
+
+    std::string getModel() const;
+    int getHorsepower() const;
+
 private:
     std::string _model;
     int _horsepower;
